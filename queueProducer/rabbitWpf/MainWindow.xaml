@@ -1,0 +1,48 @@
+﻿<Window x:Class="rabbitWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:rabbitWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="563" Width="800">
+    <Grid Height="573" VerticalAlignment="Top" Margin="10,24,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="264*"/>
+            <RowDefinition Height="44*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="207*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="495*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock HorizontalAlignment="Left" Margin="5,-2,0,0"
+                   TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontWeight="Bold" FontSize="16" Height="22" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2"
+                   ><Run Text="Od"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="5,10,0,0"
+                   TextWrapping="Wrap" VerticalAlignment="Top" Width="65" FontWeight="Bold" FontSize="16" Height="22" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"
+                   ><Run Text="Do"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="senderAddr" PreviewKeyDown="TextBox_PreviewKeyDown" HorizontalAlignment="Left" Margin="12,0,0,0" TextWrapping="Wrap"  
+                 VerticalAlignment="Top" Width="728" Height="21" FontSize="14" Grid.ColumnSpan="4" Grid.Column="2" Grid.RowSpan="2" />
+        <TextBox x:Name="recipients" PreviewKeyDown="TextBox_PreviewKeyDown"  HorizontalAlignment="Left" Margin="12,12,0,0" TextWrapping="Wrap"  
+                 VerticalAlignment="Top" Width="728" Height="21" ToolTip="Aby dodać więcej adresów, wpisz je po symbolu &quot;;&quot;" FontSize="14" Grid.ColumnSpan="5" Grid.Row="1" Grid.Column="2" />
+        <TextBox x:Name="subject" PreviewKeyDown="TextBox_PreviewKeyDown" Text="Temat" HorizontalAlignment="Left" Margin="2,49,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="760" Height="19" FontSize="14" Grid.ColumnSpan="6" Grid.Row="1" Grid.Column="1"/>
+        <Button Content="Wyślij" HorizontalAlignment="Left" Margin="377,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.602,1.784" Height="29" Width="95" Click="SendMessage" Grid.Column="6" Grid.Row="3"/>
+        <TextBox x:Name="body" PreviewKeyDown="TextBox_PreviewKeyDown" Tag="Treść" HorizontalAlignment="Left" Margin="2,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="760" Height="211" Text="Treść" Grid.ColumnSpan="6" Grid.Row="2" Grid.RowSpan="2" Grid.Column="1"/>
+        <Button Content="Dodaj załącznik" HorizontalAlignment="Left" Margin="265,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.715,-1.043" Height="29" Width="95" Click="AddAttachment" Grid.Row="3" Grid.Column="6"/>
+        <ComboBox x:Name="platformSelector" PreviewKeyDown="TextBox_PreviewKeyDown" HorizontalAlignment="Left" Margin="377,246,0,0" VerticalAlignment="Top" Width="95" SelectionChanged="platform_SelectionChanged" Grid.Column="5" Grid.Row="3" Height="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="265,247,0,0" TextWrapping="Wrap" Text="Serwer poczty" VerticalAlignment="Top" Height="19" Grid.Column="5" Grid.Row="3" Width="95"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="3" Margin="2,161,254,42" Grid.ColumnSpan="6" Grid.Column="1">
+            <TextBlock x:Name="attachmentsList" TextWrapping="Wrap" Margin="18,5,9,4" RenderTransformOrigin="0.491,0.51" />
+        </Border>
+
+        <Button Content="Wyczyść dane" HorizontalAlignment="Left" Margin="265,206,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.715,-1.043" Height="29" Width="207" Grid.Row="3" Grid.Column="5" Click="ClearMail"/>
+    </Grid>
+</Window>

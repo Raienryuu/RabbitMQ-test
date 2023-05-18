@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "RnG/a/13ZBDGB1t3RF5eO/REDy1sSD+8Am4Z6NinfQvN5q3wqea6pDzn6qW//p3Kmz/uQflccoJvBJDEUGCJDQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Peter\\source\\repos\\mailSender\\mailSender\\mailSender.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Peter\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Peter\\.nuget\\packages\\rabbitmq.client\\6.5.0\\rabbitmq.client.6.5.0.nupkg.sha512",
+    "C:\\Users\\Peter\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\Peter\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
